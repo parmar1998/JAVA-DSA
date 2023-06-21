@@ -1,0 +1,58 @@
+package com.cn.DynamicProgramming;
+
+/*
+ * Longest Common Subsequence
+ * Input 1 --> "AFFTAB"  Input 2 --> "GXTXAYB"
+ * Output --> "GTAB"
+ */
+
+/*
+ * Memoization ensures that a method doesn't run for the same inputs more than once by keeping a record of
+ *  the results for the given inputs (usually in a hash map).
+ * o avoid the duplicate work caused by the branching, we can wrap the method in a 
+ * class that stores an instance variable, memo, that maps inputs to outputs. Then we simply
+ * check memo to see if we can avoid computing the answer for any given input, and 
+ * save the results of any calculations to memo. 
+ */
+public class LongestCommonSubsequence {
+	
+	public static int lcs(String s,String t) {
+		int dp[][]=new int[s.length()+1][t.length()+1];
+		for(int i=0;i<dp.length;i++) {
+			for(int j=0;j<dp[0].length;j++) {
+				dp[i][j]=-1;	
+			}
+		}
+		return lcshelper(s,0,t,0,dp);
+	}
+	private static int lcshelper(String s, int i, String t, int j, int[][] dp) {
+		if(i==s.length()||j==t.length()) {
+			return 0;	
+		}
+		if(s.charAt(i)==t.charAt(j)) {
+			if(dp[i+1][j+1]==-1) {
+				dp[i+1][j+1]=lcshelper(s, i+1, t, j+1, dp);
+			}
+			dp[i][j]=1+dp[i+1][j+1];
+		}
+		else {
+			if(dp[i][j+1]==-1) {
+				dp[i][j+1]=lcshelper(s, i, t, j+1, dp);
+			}
+			int ans1=dp[i][j+1];
+			if(dp[i+1][j]==-1) {
+				dp[i+1][j]=lcshelper(s, i+1, t, j, dp);
+			}
+			int ans2=dp[i+1][j];
+			dp[i][j]=Math.max(ans1, ans2);
+		}
+		return dp[i][j];
+	}
+
+	public static void main(String[] args) {
+		int x=lcs("AFFTAB", "GXTXAYB");
+		System.out.println(x
+				);
+	}
+	
+}

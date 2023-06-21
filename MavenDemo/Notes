@@ -1,0 +1,19 @@
+
+Maven is open source software project management Tool helps in creation building management of java based project
+Repository - maven fetches
+
+Maven Terms
+Project Structure
+Archetype - pre-organized structure - uniform directory structure
+pom.xml
+settings.xml - configuration file
+Dependency 
+Plugin - what task you want maven to do
+Repository
+
+Maven local Repository
+Maven Remote
+Maven Central
+
+Compile --- Package --- Deploy : Build
+Many Types of Packaging

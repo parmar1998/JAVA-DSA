@@ -1,0 +1,20 @@
+package com.cn.trie;
+
+public class Trie {
+	
+	private TrieNode root;
+	public int count;
+	public Trie() {
+	root=new TrieNode('\0');
+	}
+	
+	public void add(String word) {
+		
+	}
+	private void add(TrieNode root,String word) {
+		if(word.length()==0) {
+			root.isTerminating=true;
+			return;
+		}
+	}
+}

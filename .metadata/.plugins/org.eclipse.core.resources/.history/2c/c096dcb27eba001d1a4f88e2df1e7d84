@@ -1,0 +1,13 @@
+package com.cn.trie;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		Trie t=new Trie();
+		t.add("note");
+		t.add("NOT");
+		t.add("Arsenal");
+		t.add("argon");
+		System.out.println(t.search("note"));
+	}
+}

@@ -1,0 +1,15 @@
+package com.infy.forAssesment;
+
+import java.util.Collection;
+
+import org.junit.jupiter.api.DynamicTest;
+import org.junit.jupiter.api.TestFactory;
+
+public class DynamicCalculatortest {
+
+	private Calculator calculator = new Calculator();
+	@TestFactory
+	Collection<DynamicTest> converttoNumber(){
+		
+	}
+}

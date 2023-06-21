@@ -1,0 +1,12 @@
+package com.cn.Programs;
+
+import java.util.Scanner;
+
+public class Sum_and_Product_of_Number {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in)	;
+		int b=sc.nextInt();
+		int c=sc.next
+	}
+	
+}

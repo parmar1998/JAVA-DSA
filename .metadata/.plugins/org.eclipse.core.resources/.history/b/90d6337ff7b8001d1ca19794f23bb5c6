@@ -1,0 +1,21 @@
+package com.codingninja.PriorityQueue.MinQueue;
+
+import java.util.ArrayList;
+
+public class MAXPriority_Queues_operations<T> {
+	private ArrayList<Element<T>> heap;
+	
+	public MAXPriority_Queues_operations() {
+		heap=new ArrayList<>();
+	} 
+	
+	public boolean isEmpty() {
+		if(heap.size()==0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+}

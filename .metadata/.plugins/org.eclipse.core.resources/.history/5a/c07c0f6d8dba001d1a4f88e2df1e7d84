@@ -1,0 +1,18 @@
+package com.cn.trie;
+
+public class TrieNode {
+
+char data;//to store data in node
+boolean isTerminating;
+TrieNode children[];//an array to store the reference of children
+int childcount;//an integer to store the number of children
+
+public TrieNode(char data) {
+this.data=data;
+this.isTerminating=false;
+children=new TrieNode[26];
+
+}
+
+
+}

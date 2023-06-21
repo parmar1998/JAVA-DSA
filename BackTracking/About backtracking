@@ -1,0 +1,6 @@
+Backtracking name itself suggests that we are going back and coming forward; if it satisfies the condition, 
+then return success, else we go back again. It is used to solve a problem in which a sequence of objects is chosen 
+from a specified set so that the sequence satisfies some criteria.
+
+Recursion is a technique that calls the same function again and again until you reach the base case. 
+Backtracking is an algorithm that finds all the possible solutions and selects the desired solution from the given set of solutions.

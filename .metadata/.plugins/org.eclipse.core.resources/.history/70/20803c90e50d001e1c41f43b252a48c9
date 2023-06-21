@@ -1,0 +1,9 @@
+package com.cn.m1;
+
+public class Solution {
+	public static void allFactors(int num) {
+		
+	}
+	public static void main(String[] args) {
+	}
+}

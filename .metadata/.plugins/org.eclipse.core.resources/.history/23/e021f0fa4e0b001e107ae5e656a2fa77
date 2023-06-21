@@ -1,0 +1,32 @@
+package com.infy.forAssesment;
+
+public class Calculator {
+	public int addition(int x, int y) {
+		return y + x;
+	}
+
+	public int multiplication(int x, int y) {
+		return y * x;
+	}
+
+	public int substraction(int x, int y) {
+		if (x > y) {
+			return x - y;
+		} else {
+			return y - x;
+		}
+	}
+
+	public int division(int x, int y) {
+		return x / y;
+	}
+	public Integer convertToNumber(String symbol) {
+		Integer num;
+		switch(symbol) {
+		case "I":
+		num=1
+		break
+		}
+	}
+
+}

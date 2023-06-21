@@ -1,0 +1,38 @@
+package com.grpah2.cn;
+
+/*
+Take input & store Edges
+Sort edges in ascending order of weight
+we can sort the Array in ascending using arrays.sort()
+*/
+
+/*
+	 We often need to compare two values in our Java programs.
+		 Comparing primitive values like int, char, float is very easy and can 
+		 be done with comparison operators like <, >, == etc.
+		But comparing objects is a little different. For example,
+		 how would you compare two Employees? how would you compare two Students?
+		You need to explicitly define how the objects of user defined classes 
+		should be compared. For this purpose, Java provides two interfaces called Comparable and Comparator.
+		Once you define how the objects should be compared using any of these interfaces, 
+		you’ll be able to sort them using various library functions like Collections.sort or Arrays.sort.
+ */
+public class Edge implements Comparable<Edge>
+{
+
+	int source;
+	int destination;
+	int weight;
+	
+	public Edge(int source, int destination, int weight) {		
+		this.source = source;
+		this.destination = destination;
+		this.weight = weight;
+	}
+
+	@Override
+	public int compareTo(Pair o){
+		return this.weight-o.weight;
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.cn.m1;
+
+import java.util.List;
+
+public class Solution {
+	public static void allFactors(int num) {
+		List<Integer>
+		if(num>=0&&num<=10000) {
+			for(int i=1;i<)
+		}
+	}
+	public static void main(String[] args) {
+	}
+}

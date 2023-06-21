@@ -1,0 +1,27 @@
+package com.grpah2.cn;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+//Minimum acyclic connected Graph
+//minimum no of edges to still keep it connected
+//this concept comes in weighted graph - in this you have to keep the minimum weight and keep it connected
+//so here we use KRUSKAL ALGORITHM for building MST.
+//Steps
+/*
+ * Choose edges with minimum weight
+ * we have to add in such a way that there should be no cycle present,if cycle present because of an edges, skip
+ * will make use of union find algorithm - in which we will update the parent, because of which parent gets updated 
+ * if same parent don't consider
+ */
+public class MinimumSpanningTree {
+
+	public static void main(String[] args) {
+		
+		
+		
+	
+		
+	}
+}

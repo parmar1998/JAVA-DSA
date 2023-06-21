@@ -1,0 +1,15 @@
+-> maven is building automation tool.
+-> automates the build process
+-> maven is now embedded.
+
+-> why do we need it?
+-> it provides a common folder structure.
+-> provides to manage dependency.
+-> provides a tomcat server 
+-> provides a way so that JAR can be shared across project.
+ 
+ -> Challenges if we dont have maven
+ -> project structure will not be uniform
+ -> few dependencies are needed at runtime and some at compile time.,so developer will have to take care of all this.
+ -> Transitive dependencies - inter-related dependencies.
+

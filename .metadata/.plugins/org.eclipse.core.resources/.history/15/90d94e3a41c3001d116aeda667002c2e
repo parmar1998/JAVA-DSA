@@ -1,0 +1,17 @@
+package com.cn.graphs2;
+
+public class TicTacToe {
+
+	private Player player1,player2;
+	private Board board;
+	
+	public void startGame() {
+			/*take Players input
+		ccreate the board
+		*/
+	}
+	public static void main(String[] args) {
+		TicTacToe t=new TicTacToe();
+		
+	}
+}

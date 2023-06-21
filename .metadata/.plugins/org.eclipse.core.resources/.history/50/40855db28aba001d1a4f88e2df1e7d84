@@ -1,0 +1,14 @@
+package com.cn.trie;
+
+public class TrieNode {
+char data;//describing any node of tree
+boolean isTerminalNode;//whether it is a terminal node or not
+TrieNode children[];//every node will have reference to its child node 
+int childCount;
+public TrieNode(char data) {
+	this.data=data;
+	this.isTerminalNode=false;
+	this.children=new TrieNode[26];
+	this.childCount=0
+}
+}

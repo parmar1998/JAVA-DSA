@@ -1,0 +1,64 @@
+package com.infy.forAssesment;
+
+public class Calculator {
+	public int addition(int x, int y) {
+		return y + x;
+	}
+
+	public int multiplication(int x, int y) {
+		return y * x;
+	}
+
+	public int substraction(int x, int y) {
+		if (x > y) {
+			return x - y;
+		} else {
+			return y - x;
+		}
+	}
+
+	public int division(int x, int y) {
+		return x / y;
+	}
+	public Integer convertToNumber(String symbol) {
+		Integer num;
+		switch(symbol)
+		{
+		case "I":
+		num=1;
+		break;
+		case "II":
+			num=2;
+			break;
+		case "III":
+			num=3;
+			break;
+		case "IV":
+			num=4;
+			break;
+		case "V":
+			num=5;
+			break;
+		case "VI":
+			num=6;
+			break;
+			
+		case "VII":
+			num=7;
+			break;
+		case "VIII":
+			num=8;
+			break;
+		case "XI":
+			num=9;
+			break;
+		case "X":
+			num=10;
+			break;
+		default:
+			num=null;
+		}
+		return num;
+	}
+
+}

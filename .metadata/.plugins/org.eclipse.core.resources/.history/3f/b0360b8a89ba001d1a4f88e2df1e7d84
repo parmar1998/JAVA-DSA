@@ -1,0 +1,64 @@
+package com.cn.trie;
+
+public class Trie {
+	
+	private TrieNode root;
+	public Trie() {
+	root=new TrieNode('\0');
+	}
+	
+	private void addHelper(TrieNode root,String word) {
+		
+		if(word.length()==0) {
+			root.isTerminalNode=true;
+			return;
+		}		
+				//first we will search for the 0th index of the word passed in our tree
+				//here - 'A' is given to get the array index example:- if a will be present 0 will be answer hence 0th indes it will be checked.
+				int childIndex=word.charAt(0)-'A';
+				//for this array we will search in root
+				TrieNode child=root.children[childIndex];
+				if(child==null)
+				{
+				//create new child
+				child=new TrieNode(word.charAt(0));
+				//add into children array
+				root.children[childIndex]=child;
+				}
+				addHelper(child, word.substring(1));
+	}
+	public void add(String word) {
+	addHelper(root, word);
+	}
+	private boolean searchHepler(TrieNode trie,String word) {
+		if(word.length()==0) {
+			return root.isTerminalNode;
+		}
+		int childIndex=word.charAt(0)-'a';
+		TrieNode child=root.children[childIndex];
+		if(child==null){
+			return false;
+		}
+		return searchHepler(child,word.substring(1));
+		
+	}
+	public boolean search(String word) {
+		return searchHepler(root,word);
+	}
+	private void removeHelper(TrieNode root,String word) {
+		if(word.length()==0) {
+			root.isTerminalNode=false;
+			return;
+		}
+		int childIndex= word.charAt(0)-'A';
+		TrieNode child=root.children[childIndex];
+		if(child==null) {
+			return;
+		}
+		removeHelper(root, word.substring(1));
+		
+	}
+	public void remove(String word) {
+		removeHelper(root, word);
+	}
+}

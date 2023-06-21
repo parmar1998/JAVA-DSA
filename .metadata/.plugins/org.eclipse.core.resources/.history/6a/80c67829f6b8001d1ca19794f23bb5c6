@@ -1,0 +1,18 @@
+package com.codingninja.PriorityQueue.MinQueue;
+
+public class Solution {
+
+	public static void main(String[] args) {
+	MINPriority_Queues_operations< String> minPriority_Queues_operations=new MINPriority_Queues_operations<>();
+	minPriority_Queues_operations.insert("abc", 15);
+	minPriority_Queues_operations.insert("def", 13);
+	minPriority_Queues_operations.insert("ghi", 90);
+	minPriority_Queues_operations.insert("jkl", 150);
+	minPriority_Queues_operations.insert("mno", 120);
+	
+	while(!minPriority_Queues_operations.isEmpty()) {
+		System.out.println(minPriority_Queues_operations.getMin());
+		minPriority_Queues_operations.removeMin()
+	}
+	}
+}

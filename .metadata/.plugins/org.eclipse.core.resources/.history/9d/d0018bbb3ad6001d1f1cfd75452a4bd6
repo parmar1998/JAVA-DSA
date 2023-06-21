@@ -1,0 +1,81 @@
+package com.cn.BinaryTree;
+
+import java.util.Scanner;
+
+public class Solution {
+
+	public static BinaryTreeNode<Integer> takeTreeInput(boolean isRoot, int parentData, boolean isLeft) {
+		if (isRoot) {
+			System.out.println("Enter root data");
+		} else {
+			if (isLeft) {
+				System.out.println("Enter Left Child of" + parentData);
+			} else {
+				System.out.println("Enter right child " + parentData);
+			}
+		}
+		Scanner sc = new Scanner(System.in);
+		int rootData = sc.nextInt();
+		sc.close();
+		if (rootData == -1) {
+			return null;
+		}
+		BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>(rootData);
+		BinaryTreeNode<Integer> left_child = takeTreeInput(false, rootData, true);
+		BinaryTreeNode<Integer> right_child = takeTreeInput(false, rootData, false);
+		root.left = left_child;
+		root.right = right_child;
+		return root;
+	}
+
+	public static void printTree(BinaryTreeNode<Integer> root) {
+		if (root == null) {
+			return;
+		}
+		System.out.print(root.data);
+		if (root.left != null) {
+			System.out.print("L: " + root.left.data);
+		}
+		if (root.right != null) {
+			System.out.print("R :" + root.right.data + " ");
+		}
+		System.out.println();
+		printTree(root.left);
+		printTree(root.right);
+
+	}
+
+	public static int Number_of_Nodes(BinaryTreeNode<Integer> root) {
+		if (root == null) {
+			return 0;
+		}
+		int leftNodeCount = Number_of_Nodes(root.left);
+		int rightNodeCount = Number_of_Nodes(root.right);
+		return 1 + leftNodeCount + rightNodeCount;
+
+	}
+
+	public static int Sum_of_Nodes(BinaryTreeNode<Integer> root) {
+		if (root == null) {
+			return 0;
+		}
+		return (root.data + Sum_of_Nodes(root.left) + Sum_of_Nodes(root.right));
+	}
+
+	public static int largest_of_all_Nodes(BinaryTreeNode<Integer> root) {
+		if (root == null)
+			return -1;
+		int largest_on_leftside = largest_of_all_Nodes(root.left);
+		int largest_on_rightside = largest_of_all_Nodes(root.right);
+		return Math.max(largest_on_leftside, largest_on_rightside);
+
+	}
+
+	public static int Count_Nodes_greater_tha_x(BinaryTreeNode<Integer> root,int x) {
+		if(root==null)
+			return 0
+	}
+	public static void main(String[] args) {
+
+	}
+}

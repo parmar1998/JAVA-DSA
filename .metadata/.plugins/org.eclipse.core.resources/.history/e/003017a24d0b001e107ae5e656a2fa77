@@ -1,0 +1,18 @@
+package com.infy.forAssesment;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import org.junit.jupiter.api.DynamicTest;
+import org.junit.jupiter.api.TestFactory;
+
+public class DynamicCalculatortest {
+
+	private Calculator calculator = new Calculator();
+	@TestFactory
+	Collection<DynamicTest> converttoNumber(){
+		List<String> romanSymbol=new ArrayList<>("I","II","III");
+		
+	}
+}

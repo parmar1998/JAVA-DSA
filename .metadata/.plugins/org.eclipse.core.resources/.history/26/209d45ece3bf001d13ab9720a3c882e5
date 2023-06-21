@@ -1,0 +1,59 @@
+package Fulltest1;
+
+public class Solution1 {
+	void findJumpingNumbersHelper(vector<int> &jumpingNums, int n, int startingNum)
+	{
+	    queue<int> q;
+
+	    q.push(startingNum);
+
+	    while (!q.empty())
+	    {
+	        int currentNum = q.front();
+	        q.pop();
+
+	        // Check if the the current number is smaller than n.
+	        if (currentNum <= n)
+	        {
+	            // Add the current number to list of jumping numbers.
+	            jumpingNums.push_back(currentNum);
+
+	            int lastDigit = currentNum % 10;
+
+	            if (lastDigit == 0)
+	            {
+	                // If last digit is 0, only possible next digit is 1.
+	                q.push(currentNum * 10 + 1);
+	            }
+	            else if (lastDigit == 9)
+	            {
+	                // If last digit is 9, only possible next digit is 8.
+	                q.push(currentNum * 10 + 8);
+	            }
+	            else
+	            {
+	                // Otherwise, we have two options for next digits.
+	                q.push(currentNum * 10 + (lastDigit + 1));
+	                q.push(currentNum * 10 + (lastDigit - 1));
+	            }
+	        }
+	    }
+	}
+
+	vector<int> findJumpingNumbers(int n)
+	{
+	    vector<int> jumpingNums;
+
+	    findJumpingNumbersHelper(jumpingNums, n, 0);
+
+	    for (int i = 2; i <= n && i <= 9; i++)
+	    {
+	        // Call the function taking the remaining integers 2-9 as the starting nodes.
+	        findJumpingNumbersHelper(jumpingNums, n, i);
+	    }
+
+	    sort(jumpingNums.begin(), jumpingNums.end());
+
+	    return jumpingNums;
+	}
+}

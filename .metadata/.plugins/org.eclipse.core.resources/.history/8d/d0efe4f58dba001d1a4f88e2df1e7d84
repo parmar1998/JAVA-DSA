@@ -1,0 +1,10 @@
+package com.cn.trie;
+
+public class Trie {
+	
+	private TrieNode root;
+	public int count;
+	public Trie() {
+	root=new TrieNode('\0');
+	}
+}

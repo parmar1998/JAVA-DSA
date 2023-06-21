@@ -1,0 +1,28 @@
+package com.grpah2.cn;
+
+/*
+Take input & store Edges
+Sort edges in ascending order of weight
+we can sort the Array in ascending using arrays.sort()
+*/
+
+public class Pair implements Comparable<Pair>
+{
+
+	int source;
+	int destination;
+	int weight;
+	
+	public Pair(int source, int destination, int weight) {		
+		this.source = source;
+		this.destination = destination;
+		this.weight = weight;
+	}
+
+	@Override
+	public int compareTo(Pair o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

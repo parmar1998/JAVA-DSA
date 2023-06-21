@@ -1,0 +1,33 @@
+package com.cn.BinaryTree;
+
+import java.util.Scanner;
+
+public class Solution {
+
+	public static BinaryTreeNode<Integer> takeTreeInput(boolean isRoot,int parentData,boolean isLeft){
+		if(isRoot) {
+			System.out.println("Enter root data");
+		}
+		else {
+			if(isLeft) {
+				System.out.println("Enter Left Child of"+parentData);
+			}
+			else {
+				System.out.println("Enter right child "+parentData);
+			}
+		}
+		Scanner sc=new Scanner(System.in);
+		int rootData=sc.nextInt();
+		if(rootData==-1) {
+			return null;
+		}
+		BinaryTreeNode<Integer> root=new BinaryTreeNode<Integer>(rootData);
+		BinaryTreeNode<Integer> root=new BinaryTreeNode<Integer>(rootData);
+		
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+}

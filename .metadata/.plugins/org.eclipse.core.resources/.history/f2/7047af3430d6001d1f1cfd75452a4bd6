@@ -1,0 +1,22 @@
+package com.cn.BinaryTree;
+
+public class Solution {
+
+	public static BinaryTreeNode<Integer> takeTreeInput(boolean isRoot,int parentData,boolean isLeft){
+		if(isRoot) {
+			System.out.println("Enter root data");
+		}
+		else {
+			if(isLeft) {
+				System.out.println("Enter Left Child of"+parentData);
+			}
+			else {
+				S
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+
+	}
+}

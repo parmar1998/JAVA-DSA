@@ -1,0 +1,7 @@
+package com.cn.trie;
+
+public class Trie {
+	
+	private TrieNode trieNode;
+	public int count;
+}

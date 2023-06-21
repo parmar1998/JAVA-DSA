@@ -1,0 +1,6 @@
+package com.infy.forAssesment;
+
+public class DynamicCalculatortest {
+
+	private Calculator calculator = new Calculator();
+}

@@ -1,0 +1,8 @@
+package com.cn.trie;
+
+public class TrieNode {
+
+char data;//to store data in node
+
+
+}

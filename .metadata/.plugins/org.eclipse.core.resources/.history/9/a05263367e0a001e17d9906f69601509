@@ -1,0 +1,29 @@
+
+                                              		MAVEN INTRO
+-> maven is building automation tool.
+-> automates the build process
+-> maven is now embedded.
+                                                   WHY DO WE NEED IT.
+-> it provides a common folder structure.(uniform project Structure)
+-> provides to manage dependency.
+-> provides a tomcat server 
+-> provides a way so that JAR can be shared across project.
+                                                  CHALLENGES BEFORE MAVEN
+-> project structure will not be uniform
+-> few dependencies are needed at runtime and some at compile time.,so developer will have to take care of all this.
+-> Transitive dependencies - inter-related dependencies.
+-> Duplicate dependencies - redundancy
+-> Version problem 
+                                                    USES SOLUTION        
+-> maven is evolved build process in jakarta turbine project
+													MAVEN ARCHETYPES
+-> Template - appropriate directory structure
+-> initial set of dependencies
+-> meta data that is provided for project build
+-> group id - organisation
+-> artifact id - project name
+-> version - v of project	
+													POM FILE
+-> Project Object Model - config file - declarative descriptor 		
+													MAVEN REPOSITORIES															
+-> 

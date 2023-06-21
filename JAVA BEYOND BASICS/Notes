@@ -1,0 +1,100 @@
+------------------------------------------------------------------JAVA ADVANCED------------------------------------------------------------------
+
+
+----------------------------------------------ANNOTATION-------------------------------------------------
+Format for writing annotations = @ Name
+Types - marker , Single value , MultiValue
+Predefined Annotations library - java.lang.annotations
+@Override        -> From superclass methods are overridden by subclass by using @Override annotation
+@Deprecated      -> Give extra info to compiler
+@SuppressWarning -> Unused Variable - class,interface,all,raw type "all" will remove all warning if present.
+@safeVargs       -> Error of heap pollution/bad data memory - Type safety: Potential heap pollution via varargs parameter products //included in java7
+@FunctionalInterface -> should have only one abstract method.
+@Inherited  -> Must be inherited by all subclasses.
+@Documented -> 
+@Repetable  ->
+@Target     -> Class,interface,enumeration
+
+Annotation annotation[]=c.getDeclaredAnnotations();//to get all the custom  annotations used
+Method fields[]=annotation.annotationType().getDeclaredMethod();//this will return all methods present inside the annotation
+
+-----------------------------------------------------I/O-STREAMS-------------------------------------------
+Byte Stream  -> byte to byte
+Character Stream ->Character to character
+Buffered Stream -> Use character and byte (Better Efficiency)
+
+---------------------------------------------Serialization--------------------------------------------------
+Object ---> output stream ----> File ----> Object Input Stream store in byte form
+|-------Serialization(object to byte)-------------|----------DeSerialization(Byte to object)---------------------|
+input stream - to convert
+converting object to byte stream - serialization
+Transient in Java is used to indicate that a field should not be part of the serialization process. 
+
+--------------------------------------------Cloning--------------------------------------------------
+Shallow cloning  - in primitive data types
+deep cloning - Non-primitive data types
+
+--------------------------------------------JDBC--------------------------------------------------
+1.load and register your jdbc driver
+2.establish the connection
+3.create a statement
+4.send and execute 
+5. commit - save chnages rollback - 1 change back
+
+--------------------------------------------lambda Expression--------------------------------------------------
+Function
+Predicate
+Consumer
+Supplier
+
+---------------------------------------------------Java 8 Stream API------------------------------------------
+Stream is nothing but collection- interface added to util package 
+works on sequence of data
+
+Streams are lazy
+pipeline - filter ,sorted, map ,for each/collect
+streams are non usable
+parallel stream - fork join - uses concepts of multi threading
+
+---------------------------------------------------MultiThreading------------------------------------------
+
+---------------------------------------------------Java Optional Class------------------------------------------
+		System.out.println(s.equals("abc"));		//Null pointer Exception
+		System.out.println(("abc").equals(s)); // false
+		
+---------------------------------------------------Java Optional Class------------------------------------------
+
+
+
+---------------------------------------------------Module------------------------------------------
+in module we mention required package -  to add a security level in project - package of java packages
+exports - 
+transitive- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
